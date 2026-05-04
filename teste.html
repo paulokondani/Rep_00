@@ -1,11 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu da Pizzaria Deliciosa</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: #b71c1c;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .menu-section {
+            margin-bottom: 40px;
+        }
+        .menu-section h2 {
+            border-bottom: 2px solid #d32f2f;
+            padding-bottom: 10px;
+            color: #d32f2f;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .item-details {
+            flex: 1;
+        }
+        .item-name {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .item-description {
+            color: #666;
+            margin-top: 5px;
+        }
+        .item-price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+        @media (max-width: 768px) {
+            .menu-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .item-price {
+                margin-top: 10px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Meu primeiro repositorio</h1>
+    <header>
+        <h1>Pizzaria Deliciosa</h1>
+        <p>As melhores pizzas da cidade!</p>
+    </header>
+    <nav>
+        <a href="#pizzas">Pizzas</a>
+        <a href="#bebidas">Bebidas</a>
+        <a href="#sobremesas">Sobremesas</a>
+    </nav>
+    <div class="container">
+        <section id="pizzas" class="menu-section">
+            <h2>Pizzas</h2>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Pizza Margherita</div>
+                    <div class="item-description">Molho de tomate, queijo mozzarella, manjericão fresco.</div>
+                </div>
+                <div class="item-price">R$ 25,00</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Pizza Calabresa</div>
+                    <div class="item-description">Molho de tomate, queijo mozzarella, calabresa, cebola.</div>
+                </div>
+                <div class="item-price">R$ 28,00</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Pizza Quatro Queijos</div>
+                    <div class="item-description">Mozzarella, gorgonzola, parmesão, provolone.</div>
+                </div>
+                <div class="item-price">R$ 30,00</div>
+            </div>
+        </section>
+        <section id="bebidas" class="menu-section">
+            <h2>Bebidas</h2>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Coca-Cola 350ml</div>
+                    <div class="item-description">Refrigerante clássico.</div>
+                </div>
+                <div class="item-price">R$ 5,00</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Suco de Laranja 500ml</div>
+                    <div class="item-description">Suco natural de laranja.</div>
+                </div>
+                <div class="item-price">R$ 7,00</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Água Mineral 500ml</div>
+                    <div class="item-description">Água mineral sem gás.</div>
+                </div>
+                <div class="item-price">R$ 3,00</div>
+            </div>
+        </section>
+        <section id="sobremesas" class="menu-section">
+            <h2>Sobremesas</h2>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Tiramisu</div>
+                    <div class="item-description">Sobremesa italiana com café e mascarpone.</div>
+                </div>
+                <div class="item-price">R$ 12,00</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Sorvete de Baunilha</div>
+                    <div class="item-description">Uma bola de sorvete cremoso.</div>
+                </div>
+                <div class="item-price">R$ 6,00</div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
