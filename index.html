@@ -9,85 +9,115 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f5f5f5;
             color: #333;
         }
         header {
-            background-color: #d32f2f;
+            background: linear-gradient(to right, #FF0000, #FFD700);
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
         }
         nav {
-            background-color: #b71c1c;
-            padding: 10px;
+            background-color: #FF0000;
+            padding: 15px;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         nav a {
-            color: white;
-            margin: 0 15px;
+            color: #FFD700;
+            margin: 0 20px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: white;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
         }
         .menu-section {
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
         .menu-section h2 {
-            border-bottom: 2px solid #d32f2f;
-            padding-bottom: 10px;
-            color: #d32f2f;
+            border-bottom: 4px solid #FFD700;
+            padding-bottom: 15px;
+            color: #FF0000;
+            font-size: 2em;
+            text-align: center;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
         .menu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid #eee;
+            background-color: #fff;
+            border: 2px solid #FFD700;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .menu-item:last-child {
-            border-bottom: none;
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
-        .item-details {
-            flex: 1;
+        .item-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
         .item-name {
-            font-size: 1.2em;
+            font-size: 1.4em;
             font-weight: bold;
+            color: #FF0000;
+            margin-bottom: 10px;
         }
         .item-description {
             color: #666;
-            margin-top: 5px;
+            margin-bottom: 15px;
+            font-size: 1em;
         }
         .item-price {
-            font-size: 1.2em;
+            font-size: 1.5em;
             font-weight: bold;
-            color: #d32f2f;
+            color: #FFD700;
+            background-color: #FF0000;
+            padding: 10px;
+            border-radius: 8px;
+            display: inline-block;
         }
         @media (max-width: 768px) {
-            .menu-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .item-price {
-                margin-top: 10px;
+            .menu-grid {
+                grid-template-columns: 1fr;
             }
             h1 {
-                font-size: 2em;
+                font-size: 2.5em;
+            }
+            .menu-item {
+                padding: 15px;
             }
         }
     </style>
@@ -105,67 +135,65 @@
     <div class="container">
         <section id="pizzas" class="menu-section">
             <h2>Pizzas</h2>
-            <div class="menu-item">
-                <div class="item-details">
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x150/FFD700/000000?text=Pizza+Margherita" alt="Pizza Margherita" class="item-image">
                     <div class="item-name">Pizza Margherita</div>
                     <div class="item-description">Molho de tomate, queijo mozzarella, manjericão fresco.</div>
+                    <div class="item-price">R$ 25,00</div>
                 </div>
-                <div class="item-price">R$ 25,00</div>
-            </div>
-            <div class="menu-item">
-                <div class="item-details">
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x150/FFD700/000000?text=Pizza+Calabresa" alt="Pizza Calabresa" class="item-image">
                     <div class="item-name">Pizza Calabresa</div>
                     <div class="item-description">Molho de tomate, queijo mozzarella, calabresa, cebola.</div>
+                    <div class="item-price">R$ 28,00</div>
                 </div>
-                <div class="item-price">R$ 28,00</div>
-            </div>
-            <div class="menu-item">
-                <div class="item-details">
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x150/FFD700/000000?text=Pizza+Quatro+Queijos" alt="Pizza Quatro Queijos" class="item-image">
                     <div class="item-name">Pizza Quatro Queijos</div>
                     <div class="item-description">Mozzarella, gorgonzola, parmesão, provolone.</div>
+                    <div class="item-price">R$ 30,00</div>
                 </div>
-                <div class="item-price">R$ 30,00</div>
             </div>
         </section>
         <section id="bebidas" class="menu-section">
             <h2>Bebidas</h2>
-            <div class="menu-item">
-                <div class="item-details">
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x150/FFD700/000000?text=Coca-Cola" alt="Coca-Cola" class="item-image">
                     <div class="item-name">Coca-Cola 350ml</div>
                     <div class="item-description">Refrigerante clássico.</div>
+                    <div class="item-price">R$ 5,00</div>
                 </div>
-                <div class="item-price">R$ 5,00</div>
-            </div>
-            <div class="menu-item">
-                <div class="item-details">
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x150/FFD700/000000?text=Suco+de+Laranja" alt="Suco de Laranja" class="item-image">
                     <div class="item-name">Suco de Laranja 500ml</div>
                     <div class="item-description">Suco natural de laranja.</div>
+                    <div class="item-price">R$ 7,00</div>
                 </div>
-                <div class="item-price">R$ 7,00</div>
-            </div>
-            <div class="menu-item">
-                <div class="item-details">
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x150/FFD700/000000?text=Agua+Mineral" alt="Água Mineral" class="item-image">
                     <div class="item-name">Água Mineral 500ml</div>
                     <div class="item-description">Água mineral sem gás.</div>
+                    <div class="item-price">R$ 3,00</div>
                 </div>
-                <div class="item-price">R$ 3,00</div>
             </div>
         </section>
         <section id="sobremesas" class="menu-section">
             <h2>Sobremesas</h2>
-            <div class="menu-item">
-                <div class="item-details">
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x150/FFD700/000000?text=Tiramisu" alt="Tiramisu" class="item-image">
                     <div class="item-name">Tiramisu</div>
                     <div class="item-description">Sobremesa italiana com café e mascarpone.</div>
+                    <div class="item-price">R$ 12,00</div>
                 </div>
-                <div class="item-price">R$ 12,00</div>
-            </div>
-            <div class="menu-item">
-                <div class="item-details">
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x150/FFD700/000000?text=Sorvete" alt="Sorvete" class="item-image">
                     <div class="item-name">Sorvete de Baunilha</div>
                     <div class="item-description">Uma bola de sorvete cremoso.</div>
+                    <div class="item-price">R$ 6,00</div>
                 </div>
-                <div class="item-price">R$ 6,00</div>
             </div>
         </section>
     </div>
